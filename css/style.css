@@ -1,0 +1,598 @@
+/*
+ * Title: gimnasiooeste.com
+ * Versión: 1.0
+ * Author: Luis Carrión
+ * Contact: louiss862@gmail.com
+*/
+
+/* Table of Contents
+-----------------
+  
+	 General CSS
+     General Class
+	 Menu
+     main-header
+	 section class
+	 Services
+	 Back-ground
+	 Programs
+	 Horary 
+	 Contact
+	 Footer
+
+*/
+
+/* === general css === */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight:normal;
+    font-size: 1em;
+    line-height: 24px;
+}
+
+a,
+i {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+address {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* === general class === */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+    .clearfix::after {
+     clear: both;
+    }
+
+
+.btn {
+    display: inline-block;
+    padding: 11px 20px 11px;
+    letter-spacing: 2px;
+    background:#fff;
+    margin-top: 35px;
+    color: #f7003a;
+    font-weight: 600;
+}
+
+.line-bottom {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.line-bottom::after {
+    content: ' ';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    background: #f7003a;
+}
+
+.section-content {
+    padding: 25px 0 25px 0;
+}
+
+    .section-content__title {
+        font-size: 24px;
+        color: #161a1c;
+        padding-bottom: 16px;
+    }
+
+.column-width {
+    width: 50%;
+    float: left;
+}
+           
+    .column-width:nth-child(odd) {
+        padding-right: 4.45%;
+    }
+       
+    .column-width:nth-child(even) {
+        padding-left: 4.45%;
+     }   
+    
+/* === menu === */
+
+.top-nav {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+    .top-nav .container {
+        position: relative;
+    }
+
+    .menu {
+        position: absolute;
+        top: -10px;
+        right: -20px;
+        background: #FFF;
+        width: 280px;
+        z-index: 98;
+        border-radius: 4px;
+        border: solid 1px rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: all 0.6s ease;
+        transform: translatey(-120%);
+    }
+
+    .menu li  a {
+	    display: block;
+	    font-size: 14px;
+	    color: #808080;
+	    padding: 12px 25px;
+	    text-decoration: none;
+	    margin-bottom: 7px;
+        font-weight: 400;
+        transform: translateY(-400%);
+    }
+
+    .menu li  a:hover {
+	    background: #F0F0F0;
+	    background: rgba(0,0,0,.04);
+        color: #f7003a;
+        transition: all 0s;
+    }
+    .menu  ul {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0 1px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+.show-menu .menu {
+	transition: box-shadow .6s .3s ease;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+    transform: translatey(0%);
+    transition: all 0.6s;
+}
+
+    .show-menu .menu li a {
+        transform: translateY(0%);
+        transition: all 1.3s;
+    }
+
+.icon-menu::before {
+    color: #fff;
+    font-size: 27px;
+    margin-right: 0;
+    width: auto;
+}  
+ 
+     .icon-color-top::before, .icon-color::before  {
+        color: #202020;
+        font-size: 40px;
+    }
+
+    .icon-color-nav::before {
+        color: #f7003a;
+    }
+
+.menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+   
+/* === main-header === */
+
+.main-header {
+    background-color: #000;
+    background: url(../img/gimnasio-oeste.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.logo {
+    color: #f7003a;
+    font-size: 30px;
+    padding-top: 50px;
+    float: left;
+}
+
+.icon-social {
+    float: right;
+    padding-top: 50px;
+    padding-right: 49px;
+}
+
+    .icon-social i {
+        font-size: 22px;
+    }
+
+    .icon-social i:hover {
+        color: #f7003a;
+    }
+
+.intro-header {
+    padding: 200px 0 120px 0;
+    text-align: right;
+    float: right;
+    max-width: 541px;
+}
+
+.intro-title {
+    font-size: 48px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .intro-title .line-bottom::after {
+        right: 0;
+    }
+
+.color-subtitle {
+    color: #f7003a;
+}
+
+@media only screen and ( max-width: 590px ){
+
+    .intro-title {
+        font-size: 42px;
+    }
+
+    .logo, .icon-social {
+        float: none;
+        text-align: center;
+    }
+
+    .icon-social {
+        padding-right: 0;
+        padding-top: 40px;
+    }
+
+}
+
+
+@media only screen and ( max-width: 526px ){
+
+    .intro-title {
+        font-size: 35px;
+    }
+
+}
+
+@media only screen and ( max-width: 440px ){ 
+
+    .logo {
+        font-size: 23px;
+    }
+}
+
+
+@media only screen and ( max-width: 437px ){
+
+    .intro-title {
+        font-size: 25px;
+    }
+    
+}
+    
+@media only screen and ( max-width: 360px ){
+
+    .logo {
+        font-size: 20px;
+    }
+    
+}
+
+/* === section class === */
+
+.title-main {
+    text-align: center;
+    background: #f7003a;
+    padding: 28px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.title-section {
+    padding-top: 55px;  
+}
+    .title-section h2 {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        letter-spacing: 1px;
+        padding-bottom: 20px;
+        color: #161a1c;
+    }
+
+    .title-section  .line-bottom::after {
+        left: 0; 
+    }
+
+    .title-section p {
+        padding: 25px 0;
+    }
+
+.class-fitnes {
+    display: inline-block;
+    width: 50%;
+    padding-left: 4.45%;
+}    
+
+@media only screen and ( max-width: 780px ){
+
+    .column-width {
+        width: 100%;
+    }
+               
+        .column-width:nth-child(odd) {
+            padding-right: 0;
+        }
+           
+        .column-width:nth-child(even) {
+            padding-left: 0;
+         } 
+    
+    .class-fitnes {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .section-content__title {
+        padding-top: 20px;
+    }
+}   
+ 
+@media only screen and ( max-width: 361px ){
+    
+    .title-section h2 {
+        font-size: 26px;
+    }
+            
+}
+
+/* === Services === */
+
+.services {
+    text-align: center;
+    background: #f7f7f7;
+    padding-bottom: 40px;
+}
+
+.services-column {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+    .services-column:nth-child(3n+3) {
+         margin-right: 0;
+    } 
+
+    .services-column h2 {
+        color: #f7003a;
+        padding-top: 17px;
+        padding-bottom: 0;
+        font-size: 23px;
+   }
+    
+@media only screen and ( max-width: 686px ){
+    
+    .services-column {
+        width: 45%;
+    }
+
+    .services-column:nth-child(even) {
+        margin-right: 0;
+   } 
+
+    .services-column:nth-child(odd) {
+        margin-right: 10%;
+    } 
+
+}    
+
+    
+@media only screen and ( max-width: 380px ){
+    
+    .services-column {
+        width: 100%;
+    }
+
+    .services-column:nth-child(even) {
+        margin-right: 0;
+   } 
+
+    .services-column:nth-child(odd) {
+        margin-right: 0;
+    } 
+
+} 
+
+/* === Back-ground === */
+
+.back-ground {
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;   
+    background-position: right;
+}
+
+    .back-ground h2 {
+        font-size: 53px;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        padding: 70px 0;
+        width: 70%;
+        text-transform:  uppercase;
+    }
+
+    
+ @media only screen and ( max-width: 527px ){
+    
+    .back-ground h2 { 
+        font-size: 30px;
+    }
+
+    .back-ground { 
+        background-position-x: 85%;
+    }
+    
+} 
+
+/* === Programs === */
+
+    .programs .title-section {
+        text-align: right;
+    }
+
+        .programs  .column-width:nth-child(even) {
+            padding-right: 40px;
+            padding-left: 0;
+         }   
+
+        .programs  .column-width:nth-child(odd) {
+            padding-left: 40px;
+            padding-right: 0;
+        }  
+        
+        .programs .section-content__title {
+            padding-top: 20px;
+        }
+
+@media only screen and ( max-width: 780px ){
+    
+    .programs  .column-width:nth-child(even) {
+        padding-right: 0;
+        padding-left: 0;
+     }   
+
+    .programs  .column-width:nth-child(odd) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+            
+}
+
+/* === Horary === */        
+
+  .horary {
+      background: url(../img/bg-img8.jpg) no-repeat center;
+      background-size: cover;
+      text-align: center;
+      color: #fff;
+      padding: 50px 0;
+  }
+
+    .horary h2 {
+        color: #fff;
+    }
+
+    .horary div {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+/* === Contact === */      
+
+.contact {
+    text-align: center;
+    background: #f7f7f7;
+    padding-bottom: 30px;
+}
+
+  .map {
+      width: 65%;
+      float: left;
+  }
+
+    .map iframe {
+        width: 100%;
+        height: 210px;
+    }
+
+  .address {
+      width: 35%;
+      text-align: left;
+      float: left;
+      padding-left: 25px;
+  }
+  
+@media only screen and ( max-width: 780px ){
+    
+    .map {
+        width: 58%; 
+    }
+
+    .address {
+        width: 42%;
+    }
+            
+}
+
+@media only screen and ( max-width: 583px ){
+    
+    .map {
+        width: 100%; 
+    }
+
+    .address {
+        width: 100%;
+    }
+            
+}
+
+/* === Footer === */   
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f7003a;
+    color: #fff;
+}
+
+.text-color:hover {
+    color: rgba(0,0,0,0.6); 
+}
+
+
